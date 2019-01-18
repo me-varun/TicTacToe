@@ -129,7 +129,9 @@ def main():
             changeturn()
             continue
         chance = check()
-        if turns > 9:
+
+        if( turns >= 9 and not chance ):
+            display()
             print("It's a Draw")
             exit(0)
 
